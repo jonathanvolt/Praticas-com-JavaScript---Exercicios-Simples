@@ -1,0 +1,61 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imposto sobre vendas</title>
+</head>
+
+<body>
+
+    <h1> Calcular imposto sobre vendas</h1>
+
+
+    <div>
+
+        <p><input type="number" id="valor1" value="" placeholder="Insira o valor da venda:"></p>
+            
+        <p><button type="button" onclick="result()">Calcular valores!</button></p>
+        <p> <span id="impostoestadual"></span></p>
+        <p> <span id="impostomunicipal"></span></p>
+        <p> <span id="impostototal"></span></p>
+        <p> <span id="valortotal"></span></p>
+
+
+    </div>
+
+    <script type="text/javascript">
+        function result() {
+
+            var valor1 = parseInt(document.getElementById('valor1').value);
+
+
+            var texto1 = 'Imposto estadual: R$';
+            var texto2 = 'Imposto Municipal: R$' ;
+            var texto3 = 'Total Impostos: R$' ;
+            var texto4 = 'Valor total: R$' ;
+
+            var linha1 = document.getElementById('impostoestadual');
+            var linha2 = document.getElementById('impostomunicipal');
+            var linha3 = document.getElementById('impostototal');
+            var linha4 = document.getElementById('valortotal')
+
+            var impostoestadual = (valor1 * 0.04).toFixed(2);
+            var impostomunicipal = (valor1 * 0.02).toFixed(2);
+            var impostototal = ((valor1 * 0.04) + (valor1 * 0.02 )).toFixed(2);
+            var valortotal = ((valor1 * 0.04) + (valor1 * 0.02 ) + (valor1)).toFixed(2);
+
+            linha1.innerText = texto1 + impostoestadual;
+            linha2.innerText = texto2 + impostomunicipal;
+            linha3.innerText = texto3 + impostototal;
+            linha4.innerText = texto4 + valortotal;
+                             
+
+        }
+    </script>
+
+</body>
+
+
+</html>
