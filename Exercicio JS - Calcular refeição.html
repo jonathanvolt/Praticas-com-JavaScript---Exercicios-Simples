@@ -1,0 +1,56 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de refeição</title>
+</head>
+
+<body>
+
+    <h1> Calculo de gastos com refeição</h1>
+
+
+    <div>
+
+        <p><input type="number" id="valor1" value="" placeholder="Insira o valor da refeição:"></p>
+            
+        <p><button type="button" onclick="result()">Calcular gastos!</button></p>
+        <p> <span id="resultado"></span></p>
+        <p> <span id="resultado2"></span></p>
+        <p> <span id="resultado3"></span></p>
+
+
+    </div>
+
+    <script type="text/javascript">
+        function result() {
+
+            var valor1 = parseInt(document.getElementById('valor1').value);
+
+
+            var texto = 'O valor total da refeição é R$';
+            var texto2 = 'Sendo que valor pago de gorgeta (15%) foi: R$' ;
+            var texto3 = 'e o valor pago de imposto (7%) foi: R$' ;
+
+            var campo = document.getElementById('resultado');
+            var campo2 = document.getElementById('resultado2');
+            var campo3 = document.getElementById('resultado3');
+
+            var resultado = ((valor1 * 0.15) + (valor1 * 0.07) + (valor1) ).toFixed(2);
+            var resultado2 = (valor1 * 0.15).toFixed(2);
+            var resultado3 = (valor1 * 0.07).toFixed(2);
+
+            campo.innerText = texto + resultado;
+            campo2.innerText = texto2 + resultado2;
+            campo3.innerText = texto3 + resultado3;
+                             
+
+        }
+    </script>
+
+</body>
+
+
+</html>
