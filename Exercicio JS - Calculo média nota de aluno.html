@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2> Cálculo de aprovação de alunos </h2>
+Digite a primeira nota <input id="nota1" type="number"> <br/>
+Digite a Segunda  nota <input id="nota2" type="number"> <br/>
+<button onclick="media()">Calcular Média</button>
+
+<hr>
+<h6> Jonathan Oliveira - DSM - FATEC Osasco - 2022  </h6>
+<script>
+function media(){
+var nota1 = parseFloat(document.getElementById("nota1").value);
+var nota2 = parseFloat(document.getElementById("nota2").value);
+var media = (nota1 + nota2)/2 ;
+if(media >= 7) {
+alert("Parabens, aprovado! Media: "+media);
+} else {
+alert("Reprovado! Media: "+media);
+}
+}
+</script>
+</body>
+</html>
