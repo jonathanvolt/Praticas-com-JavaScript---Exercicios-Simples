@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negociar Ações</title>
+</head>
+
+<body>
+    <h1>Calculo de negociação de ações</h1>
+
+    <div>
+        <p><b>Quantidade de ações: </b></p>
+        <p><input type="number" id="valor1" value="" placeholder="Digite aqui"></p>
+        <p><b>Valor da ação na compra: </b></p>
+        <p><input type="number" id="valor2" value="" placeholder="Digite aqui"></p>
+        <p><b>Percentual da comissão na compra (%): </b></p>
+        <p><input type="number" id="valor3" value="" placeholder="Digite aqui"></p>
+        <p><b>Valor da ação na venda: </b></p>
+        <p><input type="number" id="valor4" value="" placeholder="Digite aqui"></p>
+        <p><b>Percentual da comissão na venda (%): </b></p>
+        <p><input type="number" id="valor5" value="" placeholder="Digite aqui"></p>
+
+
+        <p><button type="button" onclick="result()">Calcular</button></p>
+        <p> <span id = "valorpago"></span></p>
+        <p> <span id = "comissaocompra"></span></p>
+        <p> <span id = "valorvenda"></span></p>
+        <p> <span id = "comissaovenda"></span></p>
+        <p> <span id = "lucro"></span></p>
+        <p><b> <span id = "retorno1"></span></b></p>
+
+    </div>
+
+    <script type="text/javascript">
+        function result() {
+
+            var valor1 = parseInt(document.getElementById('valor1').value);
+            var valor2 = parseInt(document.getElementById('valor2').value);
+            var valor3 = parseInt(document.getElementById('valor3').value);
+            var valor4 = parseInt(document.getElementById('valor4').value);
+            var valor5 = parseInt(document.getElementById('valor5').value);
+
+
+            var texto1 = 'Valor pago pelas ações: R$';
+            var texto2 = 'Valor pago na comissão de compra: R$' ;
+            var texto3 = 'Valor de venda das ações: R$ ';
+            var texto4 = 'Valor pago na comisssão de venda: R$';
+            var texto5 = 'Lucro final das operações: R$';
+            var texto6 = '*** Esta operação gerou LUCRO! ***';
+            var texto7 = '*** Esta operação gerou PREJUIZO!***';
+
+            var linha1 = document.getElementById('valorpago');
+            var linha2 = document.getElementById('comissaocompra');
+            var linha3 = document.getElementById('valorvenda');
+            var linha4 = document.getElementById('comissaovenda');
+            var linha5 = document.getElementById('lucro');
+            var linha6 = document.getElementById('retorno1');
+           
+           var valorpago = (valor1 * valor2).toFixed(2);
+           var comissaocompra = (((valor3)/100) * (valor1 * valor2)).toFixed(2);
+           var valorvenda = (valor1 * valor4).toFixed(2);
+           var comissaovenda = (((valor5)/100) * (valor1 * valor4)).toFixed(2);
+           var lucro = ((valor1*valor4) - (((valor5)/100) * (valor1 * valor4))).toFixed(2);
+
+           linha1.innerText = texto1 + valorpago;
+           linha2.innerText = texto2 + comissaocompra;
+           linha3.innerText = texto3 + valorvenda;
+           linha4.innerText = texto4 + comissaovenda;
+           linha5.innerText = texto5 + lucro;
+
+           if (((valor1*valor4) - (((valor5)/100) * (valor1 * valor4))) >  (valor1 * valor2))
+           {
+
+            linha6.innerText = texto6
+            }
+            else {
+                linha6.innerText = texto7
+            }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
