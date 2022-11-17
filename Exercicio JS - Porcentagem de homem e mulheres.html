@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentagem de H e M </title>
+</head>
+
+
+<body>
+
+    <h1>Calcular Percentual de homens e mulheres na sala</h1>
+
+    <div>
+        <p>Número de homens:</p>
+        <p><input type="number" id="homeminput" value="" placeholder="Digite aqui"></p>
+        <p1>Número de mulheres:</p1>
+        <p><input type="number" id="mulherinput" value="" placeholder="Digite aqui"></p>
+
+
+
+        <p><button type="button" onclick="result()">Calcular</button></p>
+        <p> <span id = "homem"></span> </p>
+        <p> <span id = "mulher"></span> </p>
+
+    </div>
+    
+    
+    <script type="text/javascript">
+        function result() {
+
+            var homeminput = parseInt(document.getElementById('homeminput').value);
+            var mulherinput = parseInt(document.getElementById('mulherinput').value);
+
+            var texto1 = 'Quantidade de homens: ';
+            var texto2 = 'Quantidade de mulheres: ';
+
+
+            var linha1 = document.getElementById('homem');
+            var linha2 = document.getElementById('mulher');
+
+           
+           var homem = (((homeminput)/(homeminput+mulherinput))*100).toFixed(0);
+           var mulher = (((mulherinput)/(homeminput+mulherinput))*100).toFixed(0);;
+
+
+           linha1.innerText = texto1 + homem + " %";
+           linha2.innerText = texto2 + mulher + ' %';
+
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
