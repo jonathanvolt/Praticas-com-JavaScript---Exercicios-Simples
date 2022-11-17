@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação menor número </title>
+</head>
+
+
+<body>
+
+    <h1>Informar qual o menor número</h1>
+
+    <div>
+        <p>Digite o primeiro número:</p>
+        <p><input type="number" id="numero1" value="" placeholder="Digite aqui"></p>
+        <p1>Digite o segundo número:</p1>
+        <p><input type="number" id="numero2" value="" placeholder="Digite aqui"></p>
+        <p1>Digite o terceiro número:</p1>
+        <p><input type="number" id="numero3" value="" placeholder="Digite aqui"></p>
+
+
+        <p><button type="button" onclick="result()">Verificar</button></p>
+        <p> <span id = "valor1"></span> </p>
+    
+    </div>
+    
+    
+    <script type="text/javascript">
+        function result() {
+
+            var numero1 = parseInt(document.getElementById('numero1').value);
+            var numero2 = parseInt(document.getElementById('numero2').value);
+            var numero3 = parseInt(document.getElementById('numero3').value);
+
+            var texto1 = 'o menor número é: ';
+     
+
+            var linha1 = document.getElementById('valor1');
+     
+           
+            if ((numero1 < numero2) && (numero1 < numero3))
+            {
+                linha1.innerText = texto1 + numero1
+                }
+               
+           else if ((numero2 < numero1) && (numero2 < numero3))
+            {
+                linha1.innerText = texto1 + numero2
+                }
+            else {
+            linha1.innerText = texto1 + numero3
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>
