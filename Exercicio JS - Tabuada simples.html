@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples </title>
+</head>
+
+
+<body>
+
+    <h1>Tabuada Básica</h1>
+
+    <div>
+        <p>Digite um número para saber a tabuada:</p>
+        <p><input type="number" id="numero1" value="" placeholder="Digite aqui"></p>
+
+        <p><button type="button" onclick="result()">Calcular</button></p>
+        <p> <span id = "v0"></span> </p>
+        <p> <span id = "v1"></span> </p>
+        <p> <span id = "v2"></span> </p>
+        <p> <span id = "v3"></span> </p>
+        <p> <span id = "v4"></span> </p>
+        <p> <span id = "v5"></span> </p>
+        <p> <span id = "v6"></span> </p>
+        <p> <span id = "v7"></span> </p>
+        <p> <span id = "v8"></span> </p>
+        <p> <span id = "v9"></span> </p>
+        <p> <span id = "v10"></span> </p>
+        
+
+    </div>
+    
+    
+    <script type="text/javascript">
+        function result() {
+
+            var numero1 = parseInt(document.getElementById('numero1').value);
+
+
+            var linha0 = document.getElementById('v0');
+            var linha1 = document.getElementById('v1');
+            var linha2 = document.getElementById('v2');
+            var linha3 = document.getElementById('v3');
+            var linha4 = document.getElementById('v4');
+            var linha5 = document.getElementById('v5');
+            var linha6 = document.getElementById('v6');
+            var linha7 = document.getElementById('v7');
+            var linha8 = document.getElementById('v8');
+            var linha9 = document.getElementById('v9');
+            var linha10 = document.getElementById('v10');
+
+
+           var v0 = (numero1 * 0);
+           var v1 = numero1 * 1;
+           var v2 = numero1 * 2;
+           var v3 = numero1 * 3;
+           var v4 = numero1 * 4;
+           var v5 = numero1 * 5;
+           var v6 = numero1 * 6;
+           var v7 = numero1 * 7;
+           var v8 = numero1 * 8;
+           var v9 = numero1 * 9;
+           var v10 = numero1 * 10;
+
+
+           linha0.innerText = numero1 + ' x 0 = ' + v0;
+           linha1.innerText = numero1 + ' x 1 = ' + v1;
+           linha2.innerText = numero1 + ' x 2 = ' + v2;
+           linha3.innerText = numero1 + ' x 3 = ' + v3;
+           linha4.innerText = numero1 + ' x 4 = ' + v4;
+           linha5.innerText = numero1 + ' x 5 = ' + v5;
+           linha6.innerText = numero1 + ' x 6 = ' + v6;
+           linha7.innerText = numero1 + ' x 7 = ' + v7;
+           linha8.innerText = numero1 + ' x 8 = ' + v8;
+           linha9.innerText = numero1 + ' x 9 = ' + v9;
+           linha10.innerText = numero1 + ' x 10 = ' + v10;
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
