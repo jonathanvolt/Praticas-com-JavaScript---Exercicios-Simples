@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head> 
+<title> Questionário prático - matrizes 1 </title>    
+
+  <!--Desenvolva um  programa Javascript que leia uma  matriz[3][3] de inteiros
+ e calcule e escreva a soma de todos os elementos da matriz. 
+Resolva utilizando o loop For      -->
+
+    <meta charset="utf-8"/>
+    
+    <script type="text/javascript" charset="utf-8">
+     
+     var linhas = window.prompt("Digite a quantidade de linhas da matriz: ");
+     var colunas = window.prompt("Digite a quantidade de colunas da matriz: ");
+     
+     var matriz = [];
+        for (var i = 0; i < linhas; i++) {
+            matriz[i] = [];
+            for (var j = 0; j < colunas; j++){
+                matriz[i][j] = '';           
+                }
+        }
+     for (var l= 0; l < linhas; l++) {
+         for (var c = 0; c < colunas; c++){
+             matriz[l][c] = prompt("Digite os valores da matriz: ");
+         }
+     }
+     
+     var valores = '';
+     for (var l=0; l < linhas ; l++){
+         for (var c = 0; c< colunas ; c++){
+             if (c < colunas - 1){
+                 valores += matriz[l][c] + " ";
+             }
+             else { valores += matriz[l][c] + "\n";
+             }
+         }
+     }
+     
+     alert("Matriz: \n" +valores);
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+      </script>
+    
+
+    </head>
+    
+    <body>
+        <!-- Nome: Jonathan Bruno T. de Oliveira - Turma DSM - NOITE
+        Algoritmo e Lógica de programação - FATEC OSASCO
+        -->
+    </body>
+    
+    
+</html>
