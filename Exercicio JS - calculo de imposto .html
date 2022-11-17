@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa IR </title>
+</head>
+
+<body>
+
+    <h1>Calcular Imposto de Renda:</h1>
+
+    <div>
+        <p>Digite o salário:</p>
+        <p><input type="number" id="entrada1" value="" placeholder="Digite aqui"></p>
+      
+        <p><button type="button" onclick="result()">Calcular</button></p>
+        <p> <span id = "retorno1"></span> </p>
+    
+    </div>
+        
+<script type="text/javascript">
+        function result() {
+
+                   
+           var entrada1 = parseInt(document.getElementById('entrada1').value);
+                  
+            var texto1 = 'Você é Isento de pagar IR ';
+            var texto2 = "O imposto a pagar é de: R$ ";
+            var texto3 = " (Alicota de 7,5%)";
+            var texto4 = " (Alicota de 15%)";
+            var texto5 = " (Alicota de 22,5%)";
+            var texto6 = " (Alicota de 27,5%)";
+            
+                  
+           var linha1 = document.getElementById('retorno1');
+
+          var faixa1 = '1903.98';
+          var faixa2 = '2826.65';
+          var faixa3 = '3751.05';
+          var faixa4 = '4664.68';
+
+          var calculofaixa1 = (entrada1 * 0.075).toFixed(2);
+          var calculofaixa2 = (entrada1 * 0.15).toFixed(2);
+          var calculofaixa3 = (entrada1 * 0.225).toFixed(2);
+          var calculofaixa4 = (entrada1 * 0.275).toFixed(2);
+
+           if (entrada1 <= faixa1)
+            {
+                linha1.innerText = texto1 //isento
+                }  
+           else if  ((entrada1 >= faixa1) && (entrada1 <= faixa2))
+           {
+                linha1.innerText = texto2 + calculofaixa1 + texto3 // 7,5%
+                }
+                else if  ((entrada1 >= faixa2) && (entrada1 <= faixa3)) //15%
+           {
+                linha1.innerText = texto2 + calculofaixa2 + texto4
+                }
+                else if ((entrada1 >= faixa3) && (entrada1 <= faixa4)) //22,5%
+           {
+                linha1.innerText = texto2 + calculofaixa3 + texto5
+                }
+                else 
+                {
+                    linha1.innerText = texto2 + calculofaixa4 + texto6 // acima de 27,5%
+
+                }
+
+        }
+        // criado por Jonathan Oliveira - Turma DSM-01 2022
+
+        
+    </script>
+
+
+</body>
+</html>
