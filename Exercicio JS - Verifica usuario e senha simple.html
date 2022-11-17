@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa senha </title>
+</head>
+
+<body>
+
+    <h1>Login no sistema:</h1>
+
+    <div>
+        <p>Usuário:</p>
+        <p><input type="text" id="entrada1" value="" placeholder="Digite aqui"></p>
+        <p1>Senha:</p1>
+        <p><input type="number" id="entrada2" value="" placeholder="Digite aqui"></p>
+        
+
+        <p><button type="button" onclick="result()">Verificar</button></p>
+        <p> <span id = "retorno1"></span> </p>
+    
+    </div>
+    
+    
+<script type="text/javascript">
+        function result() {
+
+                   
+           var entrada2 = parseInt(document.getElementById('entrada2').value);
+        
+          
+            var texto1 = 'SEJA BEM VINDO! ';
+            var texto2 = "ACESSO NEGADO! ";
+
+      
+           var linha1 = document.getElementById('retorno1');
+
+          var senha1 = '303010';
+
+
+           if ((entrada1.value == 'financeiro') && (entrada2 == senha1))
+            {
+                linha1.innerText = texto1
+                }  
+           else {
+                linha1.innerText = texto2
+                }
+          
+        }
+        // criado por Jonathan Oliveira - Turma DSM-01 2022
+
+        // Observação: Poderia ter usado o tipo 'password', mas escolhi 'number' p/ visualizar a senha digitada;
+    </script>
+
+
+</body>
+</html>
